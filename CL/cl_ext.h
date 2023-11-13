@@ -624,6 +624,7 @@ typedef struct _cl_mutable_base_config_khr {
     cl_uint num_mutable_dispatch;
     const cl_mutable_dispatch_config_khr* mutable_dispatch_list;
 } cl_mutable_base_config_khr;
+typedef cl_bitfield         cl_mutable_dispatch_promises_khr;
 
 /* cl_command_buffer_flags_khr - bitfield */
 #define CL_COMMAND_BUFFER_MUTABLE_KHR                       (1 << 1)
@@ -658,6 +659,9 @@ typedef struct _cl_mutable_base_config_khr {
 /* cl_command_buffer_structure_type_khr */
 #define CL_STRUCTURE_TYPE_MUTABLE_BASE_CONFIG_KHR           0
 #define CL_STRUCTURE_TYPE_MUTABLE_DISPATCH_CONFIG_KHR       1
+
+/* cl_mutable_dispatch_promises_khr - bitfield */
+#define CL_MUTABLE_DISPATCH_PROMISE_NO_ADDITIONAL_WORK_GROUPS_KHR (1 << 0)
 
 
 typedef cl_int CL_API_CALL
